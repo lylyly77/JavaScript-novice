@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 案例2 交换变量的值
+        // 需求：让用户给两个整数 交换两者的值
+        // 思路
+        // 1. 声明一个临时变量temp
+        // 2. 把num1的值赋值给temp
+        // 3. 把num2的值赋值给num1
+        // 4. 把temp的值赋值给num2
+        let num1 = prompt('请输入你的第一个整数')
+        let num2 = prompt('请输入你的第二个整数')
+        let temp = num1
+        num1 = num2
+        num2 = temp
+        document.write('第一个整数：', num1)
+        document.write('第二个整数：', num2)
+    </script>
+</body>
+
+</html>

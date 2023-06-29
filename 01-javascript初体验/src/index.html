@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .pink {
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="pink">按钮1</button>
+    <button>按钮2</button>
+    <button>按钮3</button>
+    <button>按钮4</button>
+
+    <script>
+        // 思路：利用循环遍历获取的button，循环每执行一次，之前粉色按钮清空颜色，当前点击的按钮渲染成粉色
+        let btns = document.querySelectorAll('button')
+        console.log(btns)
+        console.log(typeof btns)
+        for (let i = 0; i < btns.length; i++) {
+            btns[i].addEventListener('click', function () {
+                document.querySelector('.pink').className = ''
+                console.log(this)
+                this.className = 'pink'
+            })
+        }
+        // 思考
+        // console.log(btns),我们会获得一个节点对象
+        // {0:<button class="pink">按钮1</button>,1:<button>按钮2</button>,2:<button>按钮3</button>,3: <button>按钮4</button>}
+    </script>
+</body>
+
+</html>
