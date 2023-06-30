@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>类型转换</title>
+</head>
+
+<body>
+    <script>
+        // 隐式转换
+        // 规则
+        // +号两边只要有一个是字符串,都会把另外一个转成字符串
+        // 除了+号之外的算数运算符,比如-/*都会把数据转换成数字类型
+        console.log('xiaobai' + 1) //   xiaobai1 string(偷偷转换为字符串)
+        console.log(2 + '2') // 22  string
+        console.log(2 - 2)  //  0
+        console.log(2 - '2')    // 0
+        // 小技巧
+        // +作为正好解析可以转换成数字型
+        // 任何数据和字符串相加 结果都是字符串
+        console.log(+'123') //  123 number
+        let num = +prompt('123')    //  123 number
+        console.log(typeof num)
+        // 练习
+        console.log(11 + 11)
+        console.log('11' + 11)
+        console.log(11 - 11)
+        console.log('11' - 11)
+        console.log(1 * 1)
+        console.log('1' * 1)
+        console.log(typeof '123')
+        console.log(typeof +'123')
+        console.log(+'11' + 11)
+    </script>
+</body>
+
+</html>

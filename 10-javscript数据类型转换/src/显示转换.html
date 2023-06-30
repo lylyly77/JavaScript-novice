@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>显示转换</title>
+</head>
+
+<body>
+    <script>
+        // 转换成number
+        let str = '123'
+        let str1 = '12px'
+        console.log(Number(str))
+        console.log(Number(str1))   // NaN
+        console.log(Number('xiaobai'))  //  NaN
+        // 小案例 输入年薪 prompt和表单(默认转换成字符串)
+        let num = prompt('请输入你的年薪')
+        document.write(Number(num))
+        // 隐式转换
+        let num1 = +prompt('请输入你的年薪')
+        document.write(num1)
+        let num2 = Number(prompt('请输入你的年薪'))
+        document.write(num2)
+        // 转换成int
+        console.log(parseInt('12px'))
+        // 转换成float
+        console.log(parseFloat('12.34px'))
+    </script>
+</body>
+
+</html>

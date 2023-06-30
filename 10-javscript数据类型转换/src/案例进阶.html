@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>计算两个数的和</title>
+</head>
+
+<body>
+    <script>
+        // 输入两个数,计算两者的和,打印到页面中
+        // 思路
+        let num1 = prompt('请输入第一个数字')
+        let num2 = prompt('请输入第二个数字')
+        if (isNaN(+num1) || isNaN(+num2)) {
+            num1 = parseFloat(num1)
+            num2 = parseFloat(num2)
+            let sum = num1 + num2
+            alert(`计算的结果是:${sum}`)
+        } else {
+            alert('请输入数字')
+        }
+        // 提示
+        // isNaN(NaN) true
+        // NaN === NaN false
+
+    </script>
+</body>
+
+</html>
