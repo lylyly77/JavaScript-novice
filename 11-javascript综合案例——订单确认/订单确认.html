@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>订单确认</title>
+    <style>
+        h2 {
+            text-align: center;
+        }
+
+        table {
+            /* 合并相邻边框 */
+            border-collapse: collapse;
+            height: 80px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        th {
+            padding: 5px 30px;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- <h2>确认订单</h2>
+    <table>
+        <tr>
+            <th>商品名称</th>
+            <th>商品价格</th>
+            <th>商品数量</th>
+            <th>总价</th>
+            <th>收货地址</th>
+        </tr>
+        <tr>
+            <td>小米手机</td>
+            <td>2000</td>
+            <td>2</td>
+            <td>4000</td>
+            <td>山东省济南市</td>
+        </tr>
+    </table> -->
+    <!-- 由于下面document.write()重写了html，上面数据不再读取 -->
+    <script>
+        let name = prompt('请输入你要购买的商品名称：')
+        let price = +prompt('请输入你所购买的商品价格：')
+        let num = +prompt('请输入你所购买的商品数量：')
+        let address = prompt('请输入你的收货地址：')
+        let total = num * price
+        document.write(
+            `
+            <h2>订单确认</h2>
+    <table>
+        <tr>
+            <th>商品名称</th>
+            <th>商品价格</th>
+            <th>商品数量</th>
+            <th>总价</th>
+            <th>收货地址</th>
+        </tr>
+        <tr>
+            <td>${name}</td>
+            <td>${price}</td>
+            <td>${num}</td>
+            <td>${total}</td>
+            <td>${收货地址}</td>
+        </tr>
+    </table>
+            `
+        )
+    </script>
+</body>
+
+</html>
