@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>比较运算符</title>
+</head>
+
+<body>
+    <script>
+        // 比较运算符
+        // 使用场景:比较数据大小\是否相等
+        // == 左右两边的值是否相等
+        // === 左右两边的值和类型是否都相等
+        // != 左右两边值不相等
+        // !== 左右两边值和类型都不相等
+        console.log(2 == '2')   //  true 有隐式转换,把'2'转换成2
+        console.log(2 === '2')  //  false
+        console.log(2 === 2)    //  true
+        console.log(undefined === null) //  false 两种数据类型
+        console.log(NaN === NaN)    //  false NaN不等于任何人,包括他自己
+        console.log('---------------------')
+        console.log('a' < 'b')    //  true  ASCII字符代码表中每个符号都有自己的位置id
+        console.log('aa' < 'ab')    // true 第一个相同比较第二个的id
+        console.log('aa' < 'aac')   //  前两个相同比较第三个,第三个没有,那么有第三个的大
+        console.log('---------------------')
+    </script>
+</body>
+
+</html>

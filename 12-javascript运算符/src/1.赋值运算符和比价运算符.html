@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>运算符</title>
+</head>
+
+<body>
+    <script>
+        // 赋值运算符
+        let num = 1
+        // 其他赋值运算符 += *= /= %=
+        num += 1    // num = num + 1
+        // 一元运算符
+        // 1.前置自增
+        let i = 1
+        ++i
+        console.log(`i是${i}`)
+        // 2.后置自增
+        let a = 2
+        a++
+        console.log(`a是${a}`)
+        // 前置自增和后置自增的区别
+        let b = 1
+        console.log(++b + 1)    //  b先执行++b成为2，然后再和后面的1相加，最后执行console.log()语句
+        // 输出：3
+        let c = 1
+        // 输出为 2
+        console.log(c++ + 1)    //  c先和后面的1相加，然后执行console.log()语句，最后再执行c++
+        // ++b 相当于优先级最高，先自身相加之后再执行其他语句
+        // c++ 相当于优先级最低，先执行完同一行的其他语句最后自身相加
+        // 加号在前先自增后输出，加号在后先输出后自增
+
+        // 面试题
+        let d = 1
+        console.log(d++ + ++d + d)  //  7
+        // d++ 表示的是先运算再自增，所以d++是1 ，但是d++已经执行了所以d是2
+        // ++d中的d是2，所以先自增再运算，++d是2+1是3
+        // 最后的d已经变成3
+        // 最后结果就是1+3+3=7
+    </script>
+</body>
+
+</html>
