@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数字补0案例</title>
+</head>
+
+<body>
+    <script>
+        // 用户输入1个数，如果数字小于10，则前面进行补0，比如09 03 等
+        // 例如距离结束还有 00：02：18
+        let time = +prompt(`请输入一个数字：`)
+        // time = time < 10 ? '0' + time : time
+        // alert(`距离比赛结束还剩：${time}`)
+        alert(`距离比赛结束还剩：${time < 10 ? '0' + time : time}`)
+        // 用到的知识
+        // 三元表达式
+        // string+number 的类型是string+string 
+    </script>
+</body>
+
+</html>

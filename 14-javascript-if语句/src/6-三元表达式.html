@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三元表达式</title>
+</head>
+
+<body>
+    <script>
+        // 条件 ？满足条件执行的代码：不满足条件执行的代码
+        let num = 3 < 5 ? 3 : 5
+        console.log(num)
+
+        // 案例
+        // 判断2个数的最大值
+        // 用户输入两个数，输出最大的值
+
+        let num1 = Number(prompt(`请输入第一个数：`))
+        let num2 = Number(prompt(`请输入第二个数：`))
+        // let num3 = num1 > num2 ? num1 : num2
+        // alert(`较大的数字是${num3}`)
+        alert(`较大的数字是${num1 > num2 ? num1 : num2}`)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>逻辑运算符</title>
+</head>
+
+<body>
+    <script>
+        // 练习
+        // 用户输入一个数，判断这个数能被4整除，但是不能被100整除，满足条件，页面弹出true，否则弹出false
+
+        let num = +prompt(`请你输入一个数：`)
+        let num1 = num % 4 === 0 && num % 100 !== 0
+        alert(num1)
+        console.log(num1)
+        // 运算符的优先级
+        // （）
+        // ++ -- ！
+        // 先*/% 后+-
+        // > >= < <=
+        // == != === !==
+        // 先&& 后 ||
+        // =
+        // ，
+    </script>
+</body>
+
+</html>
