@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>计算银行卡余额</title>
+    <style>
+        h2 {
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            height: 80px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        th {
+            padding: 5px 30px;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 思路 -->
+    <!-- 先写死html，然后将html内容放到document.write()里，然后利用模板语法逐渐替换成变量 -->
+    <!-- <h2>2023年6月份消费</h2>
+    <table>
+        <tr>
+            <th>银行卡余额</th>
+            <th>电费</th>
+            <th>水费</th>
+            <th>网费</th>
+            <th>银行卡余额</th>
+        </tr>
+        <tr>
+            <td>1000元</td>
+            <td>100元</td>
+            <td>10元</td>
+            <td>10000元</td>
+            <td>10000元</td>
+        </tr>
+    </table> -->
+    <script>
+        // 1、用户输入总的银行卡金额，依次输入本月花费的电费，水费，网费。
+        // 2、页面打印一个表格，计算出本月银行卡还剩下的余额。
+        let date = new Date()
+        // console.log(date.getFullYear())
+        // console.log(date.getMonth())
+        let year = date.getFullYear()
+        let month = date.getMonth()
+        let total = +prompt(`请输入您的银行卡金额：`)
+        let elecPrice = +prompt(`请输入您本月的电费：`)
+        let waterPrice = +prompt(`请输入您本月的水费：`)
+        let internetPrice = +prompt(`请输入您本月的网费：`)
+        let sum = total - elecPrice - waterPrice - internetPrice
+        document.write(`
+        <h2>${year}年${month}月份消费</h2>
+        <table>
+            <tr>
+                <th>银行卡余额</th>
+                <th>电费</th>
+                <th>水费</th>
+                <th>网费</th>
+                <th>银行卡余额</th>
+            </tr>
+            <tr>
+                <td>${total}元</td>
+                <td>${elecPrice}元</td>
+                <td>${waterPrice}元</td>
+                <td>${internetPrice}元</td>
+                <td>${sum}元</td>
+            </tr>
+    </table>
+        `)
+    </script>
+</body>
+
+</html>
