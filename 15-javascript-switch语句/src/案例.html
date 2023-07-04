@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简单计算器</title>
+</head>
+
+<body>
+    <script>
+        // 简单计算器
+        // 需求：用户输入2个数字，然后输入+-*/任何一个，可以计算结果
+        let num1 = +prompt(`请您输入第一个数字：`)
+        let num2 = +prompt(`请您输入第二个数字：`)
+        let compute = prompt(`请您输入+ - * / 其中一个 ：`)
+        switch (compute) {
+            case '+':
+                alert(`您选择的是加法——结果是${num1 + num2}`)
+                break
+            case '-':
+                alert(`您选择的是减法——结果是${num1 - num2}`)
+                break
+            case '*':
+                alert(`您选择的是乘法——结果是${num1 * num2}`)
+                break
+            case '/':
+                alert(`您选择的是除法——结果是${num1 / num2}`)
+                break
+            default:
+                alert(`请输入 + - * /`)
+        }
+    </script>
+</body>
+
+</html>
