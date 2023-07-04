@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>退出循环</title>
+</head>
+
+<body>
+    <script>
+        // 过滤数组
+        let arr = [`马超`, `张飞`, `赵云`, `黄忠`, `关羽`]
+        for (let i = 0; i <= arr.length - 1; i++) {
+            if (arr[i] === '赵云') {
+                continue
+            } else {
+                document.write(`${arr[i]}听令<br>`)
+            }
+        }
+        // 截取数组
+        let arr1 = [`马超`, `张飞`, `赵云`, `黄忠`, `关羽`]
+        for (let i = 0; i <= arr.length - 1; i++) {
+            if (arr[i] === '赵云') {
+                break
+            } else {
+                console.log(`${arr[i]}听令`)
+            }
+        }
+    </script>
+</body>
+
+</html>
