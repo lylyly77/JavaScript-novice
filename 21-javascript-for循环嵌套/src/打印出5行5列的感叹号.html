@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>打印出5行5列的感叹号</title>
+</head>
+
+<body>
+    <script>
+        // for (let i = 1; i <= 5; i++) {
+        //     for (let j = 1; j <= 5; j++) {
+        //         document.write(`!`)
+        //     }
+        //     document.write(`<br>`)
+        // }
+        let i = Number(prompt(`请输入您所需要的行数：`))
+        let j = Number(prompt(`请输入您所需要的列数：`))
+        for (let row = 1; row <= i; row++) {
+            for (let column = 1; column <= j; column++) {
+                document.write(`!`)
+            }
+            document.write(`<br>`)
+        }
+    </script>
+</body>
+
+</html>
