@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 求任意2个数中的最大值，并返回
+        // function getMax(x = 0, y = 0) {
+        //     let max = 0
+        //     x <= y ? max = y : max = x
+        //     return max
+        // }
+        // 三元表达式通常用来返回一个值
+        function getMax(x = 0, y = 0) {
+            return x <= y ? y : x
+        }
+        let n = getMax(1, 100)
+        console.log(n)
+    </script>
+</body>
+
+</html>

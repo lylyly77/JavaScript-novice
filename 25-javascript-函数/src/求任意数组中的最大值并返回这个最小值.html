@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 求任意数组中的最大值并返回这个最大值
+        function getArrMax(arr = []) {
+            let max = 0
+            for (let i = 0; i < arr.length; i++) {
+                arr[i] <= max ? max : max = arr[i]
+            }
+            return max
+        }
+        let n = getArrMax([1, 13, 2, 0, 45, 2, 3])
+        console.log(n)
+    </script>
+</body>
+
+</html>
