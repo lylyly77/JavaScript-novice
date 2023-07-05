@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 有返回值的函数
+        // 当调用某个函数，这个函数会返回一个结果出来给我们
+        // 很多情况，函数都需要返回值
+        // return
+        // 返回值会返回给调用者
+        function fn() {
+            return 1
+        }
+        // return  相当于将1返回给调用者，谁调用它，就返回给谁
+        // fn()调用就给了fn()
+        //  相当于执行了 fn() = 1 将1返回给fn()
+        // 所以下面的值为1
+        console.log(fn())
+        // 一般都这么写
+        let re = fn()  //   fn() = 1  
+        console.log(re)
+        // 就像 let n = prompt()
+        // 就像 console.log(n)
+    </script>
+</body>
+
+</html>
