@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function 函数名(参数列表){
+        // 函数体
+        // }
+
+        // 计算两个数之间的累加和
+        // 形参
+        // 形参只在函数里有效
+        function getSum(start, end) {
+            let sum = 0
+            // 加了一个判断条件，处理的情况：如果两个数相等或者start>end
+            if (start < end) {
+                for (let i = start; i <= end; i++) {
+                    sum += i
+                }
+                document.write(sum)
+            } else {
+                alert(`请从小到大输入两个不同的数`)
+            }
+        }
+        let j1 = +prompt(`请输入你想计算的开始数字：`)
+        let j2 = +prompt(`请输入你想计算的结束数字：`)
+        getSum(j1, j2)
+        // 调用的小括号里面的参数是实参
+    </script>
+</body>
+
+</html>
