@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 增
+        let arr = []
+        console.log(arr)
+        console.log(arr[0]) //  undefined
+        console.log(`---------------`)
+
+        arr[0] = 1
+        arr[5] = 4  //  中间全是空属性
+        console.log(arr)
+        console.log(arr[3])
+        console.log(`---------------`)
+
+        // 数组增加
+        // arr.push() 添加到数组的末尾，并返回新数组的长度
+        arr.push('你好')
+        console.log(arr)
+        console.log(arr.push('hello'))  // 返回数组长度
+        let j = console.log(arr.push('hello'))  // 返回数组长度
+        console.log(typeof j)   // undefined
+
+        // arr.unshift() 添加到数组的开头，并返回新数组的长度
+        arr.unshift('1')
+        console.log(arr)
+    </script>
+</body>
+
+</html>
