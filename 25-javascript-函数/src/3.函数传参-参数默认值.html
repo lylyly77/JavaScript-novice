@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 形参不给值，默认是undefined（undefined + undefined = NaN）
+        // 默认值只有在缺少实参参数传递时才会执行，其实就是新的值覆盖原先的值
+        // 只传一个值，默认令第一个形参赋值
+        // 传入多个值，形参有几个，从开始位置就截取几个
+        // 实参可以是变量
+        function getSum(x = 0, y = 0) {
+            document.write(x + y)
+            console.log(x)
+            console.log(y)
+        }
+        getSum()
+        getSum(1)
+        getSum(4, 3, 3)
+        let n1 = +prompt(`请输入第一个数字`)
+        let n2 = +prompt(`请输入第二个数字`)
+        getSum(n1, n2)
+    </script>
+</body>
+
+</html>
