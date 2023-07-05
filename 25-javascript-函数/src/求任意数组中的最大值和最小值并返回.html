@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 求任意数组中的最大值和最小值并返回
+        // return只能返回一个值,但数组可以存放多个值,所以直接返回一个数组
+        function getArrMaxMin(arr = []) {
+            let max = 0
+            let min = 0
+            for (let i = 0; i < arr.length; i++) {
+                arr[i] <= max ? max : max = arr[i]
+                arr[i] >= min ? min : min = arr[i]
+
+            }
+            // 返回数组
+            return [max, min]
+        }
+        let newArr = getArrMaxMin([1, 13, 2, 0, 45, 2, 3])
+        console.log(newArr)
+        console.log(`数组的最大值是:${newArr[0]}`)
+        console.log(`数组的最小值是:${newArr[1]}`)
+    </script>
+</body>
+
+</html>
