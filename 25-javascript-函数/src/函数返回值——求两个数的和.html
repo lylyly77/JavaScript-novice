@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 真正意义上的两个数的和
+        function fn(x = 0, y = 0) {
+            return x + y
+        }
+        console.log(fn(1, 2))
+        // 这一步1,2作为实参传给了形参x,y
+        // fn(1,2)会得到一个返回值3，fn(1,2)=3
+        // 然后用n来保存这个值
+        // 代替了上面的写法
+        let n = fn(1, 2)
+        console.log(n)
+    </script>
+</body>
+
+</html>

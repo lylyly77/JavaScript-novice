@@ -14,8 +14,11 @@
         // 很多情况，函数都需要返回值
         // return
         // 返回值会返回给调用者
+        // return下一行不会执行，遇到return会结束函数,所以return后面的数据不要换行写
+        // 没有返回值,默认返回undefined
         function fn() {
             return 1
+            console.log(111)    // 不会被执行
         }
         // return  相当于将1返回给调用者，谁调用它，就返回给谁
         // fn()调用就给了fn()
