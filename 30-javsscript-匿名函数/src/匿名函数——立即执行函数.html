@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 匿名函数(没有函数名)包括
+        // 函数表达式   将匿名函数赋值给一个变量，并通过变量名称调用
+        // 立即执行函数
+
+        // 立即执行函数,函数会立即调用
+        // 避免全局变量的污染
+        // 两个立即执行函数之间要用;隔开，分号也可以写在立即执行函数前面
+        // 第一种写法
+        // (function () { })()  大括号把函数包裹起来，后面的小括号是调用
+        (function () {
+            console.log(1)
+        })();
+        (function (x, y) {
+            console.log(1, 2)
+        })(1, 2);
+        // 第二种写法
+        // (function () { }())  直接用大括号把函数和函数调用包裹起来
+        (function (n) {
+            console.log(n)
+        }(6));
+        // 也可以写函数名
+        (function fn() { }())
+    </script>
+</body>
+
+</html>
