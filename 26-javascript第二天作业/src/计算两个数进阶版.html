@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //       打开页面出现一个提示框，注意是一直提示的，'请您选择 + - * / ，如果输入q，则是退出结束程序
+
+        // - 如果输入的是 + - * / 其中任何一个，比如用户输入是 + ，则是计算求和，如果用户输入是 *  则是计算乘积
+        //   - 则提示第一个弹窗，提示用户：'请您输入第一个数字'
+        //   - 输入完毕则继续提示第二个弹窗，提示用户：'请您输入第二个数字'
+        //   - 都输入完毕，则通过警示框 alert 输出结果
+        // - 如果输入是 q，则结束程序
+        while (true) {
+            let compute = prompt(`
+            1. 请您选择 + - * /
+            2. 如果输入q，则是退出结束程序
+        `)
+            if (compute === 'q') {
+                break
+            }
+            let x = +prompt(`请输入第一个数字：`)
+            let y = +prompt(`请输入第二个数字：`)
+            switch (compute) {
+                case '+':
+                    alert(`计算结果是${x + y}`)
+                    break
+                case '-':
+                    alert(`计算结果是${x - y}`)
+                    break
+                case '*':
+                    alert(`计算结果是${x * y}`)
+                    break
+                case '/':
+                    alert(`计算结果是${x / y}`)
+                    break
+            }
+        }
+
+    // 答案
+    //     while (true) {
+    //         let re = prompt(`
+    //   1. 输入 + - * / 计算两个数字的结果
+    //   2. 如果是q则是退出
+    // `)
+    //         if (re === 'q') {
+    //             break
+    //         } else {
+    //             let x = +prompt('请输入第一个数字')
+    //             let y = +prompt('请输入第二个数字')
+    //             if (re === '+') {
+    //                 alert(`两个数的和是: ${x + y}`)
+    //             } if (re === '-') {
+    //                 alert(`两个数的差是: ${x - y}`)
+    //             } if (re === '*') {
+    //                 alert(`两个数的乘积是: ${x * y}`)
+    //             } if (re === '/') {
+    //                 alert(`两个数的求商是: ${x / y}`)
+    //             }
+    //         }
+    //     }
+
+
+    </script>
+</body>
+
+</html>
