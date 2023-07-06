@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 逻辑中断
+        // 原理：一真则真，一假则假
+        // 短路 只存在&&或者||时，当满足一定条件就不会让右边代码执行
+
+        // && 当&&的左边的值为false就短路
+        console.log(false && 6)  // 一假则假 左边已经是false了，就不用看右边的6了
+        // || 左边为true就短路
+        console.log(true || false)  // 一真则真 左边已经是true了，就不用看右边的false了
+
+        function getSum(x, y) {
+            x = x || 0  //  同理，当x存在时是true，就不用看右边的0了
+            y = y || 0  // 不存在，就赋值y=0
+            console.log(x + y)
+        }
+        getSum(1, 2)
+
+        console.log(11 && 22)   //  都是真，输出最后一个真值
+        console.log(11 || 22)   //  都是真，输出第一个真值
+    </script>
+</body>
+
+</html>
