@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 作用域:变量的生效范围
+        // 全局作用域   整个script标签内部和独立的js文件
+        // 局部作用域   函数内部，循环内部
+
+        //  全局变量 
+        let num = 10
+        function fn() {
+            console.log(num)
+        }
+        fn()
+
+        //  局部变量
+        function print() {
+            let n = 1
+            console.log(n)
+        }
+        // 特殊情况，强烈不建议
+        function println() {
+            x = 2   // 不声明，直接赋值 ，可以当全局变量看.
+        }
+        println()
+        console.log(x)
+
+        // 函数的形参也是局部变量
+    </script>
+</body>
+
+</html>
