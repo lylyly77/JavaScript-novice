@@ -32,6 +32,13 @@
         println()
         console.log(x)
 
+        function normal(x, y) {
+            // 这里的x，y也是函数的形参——局部变量
+            // 不理解什么意思，看31 逻辑中断
+            x = x || 0
+            y = y || 0
+            return x + y
+        }
         // 函数的形参也是局部变量
         // 变量的访问原则:就近原则 先局部后全局
         let x = 12

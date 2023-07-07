@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 实现两个数的值交换(函数版本) 
+        function changeNum(x, y) {
+            let n = 0
+            x = x || 0
+            y = y || 0
+            n = x
+            x = y
+            y = n
+            return [x, y]
+        }
+        let change = changeNum(4, 9)
+        console.log(change)
+    </script>
+</body>
+
+</html>
