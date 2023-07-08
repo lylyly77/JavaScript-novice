@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 遍历数组对象
+        // 需求:请把下面数据中的对象打印出来
+        let students = [
+            { name: '小明', age: 18, gender: '男', 'hometown': '河北省' },
+            { name: '小红', age: 19, gender: '女', 'hometown': '山东省' },
+            { name: '小蓝', age: 17, gender: '女', 'hometown': '湖北省' },
+            { name: '小白', age: 16, gender: '男', 'hometown': '广东省' }
+        ]
+        for (let i = 0; i <= students.length - 1; i++) {
+            console.log(students[i])
+            for (let key in students[i]) {
+                console.log(students[i][key])
+            }
+        }
+    </script>
+</body>
+
+</html>

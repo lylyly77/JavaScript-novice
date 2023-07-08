@@ -8,7 +8,25 @@
 </head>
 
 <body>
-
+    <script>
+        let obj = {
+            name: '老师',
+            age: '18',
+            gender: '男'
+        }
+        // 遍历对象
+        for (let key in obj) {
+            // 获得对象的属性
+            console.log(key)  // 属性名 'name' 'age' 'gender' 字符串
+            console.log(obj.key)    //  undefined
+            //  obj.key 相当于 obj.'name' obj.'age' obj.'gender'
+            // 既然key是字符串
+            // 那么尝试另一种写法
+            // obj['属性名']
+            // 获得对象的属性值
+            console.log(obj[key])
+        }
+    </script>
 </body>
 
 </html>
