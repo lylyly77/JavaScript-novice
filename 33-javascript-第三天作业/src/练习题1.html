@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 写一个程序，要求如下（★★） 
+
+        // * 需求1：让用户输入五个有效年龄（0-100之间），**放入数组中**
+
+        // * 必须输入五个有效年龄年龄，如果是无效年龄，则不能放入数组中
+        // * 需求2：打印出所有成年人的年龄 (数组筛选)
+        // * 需求3：打印出所有人总年龄 （累加）
+        // * 需求4：打印出所有人的平均年龄 （累加）
+        // * 需求5：打印出最大年龄和最小年龄 （最大值）
+
+        // 需求一
+        let arr = []
+        // while循环 难点
+        while (arr.length < 5) {
+            let n = +prompt(`请输入您的年龄：`)
+            if (n > 1 && n < 100) {
+                arr.push(n)
+            }
+        }
+        console.log(arr)
+
+        // 需求二
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] >= 18) {
+                console.log(`成年人年龄：${arr[i]}`)
+            }
+        }
+
+        // 需求三
+        let sum = 0
+        for (let i = 0; i < arr.length; i++) {
+            sum += arr[i]
+        }
+        console.log(`年龄总和：${sum}`)
+
+        // 需求四
+        console.log(`年龄平均值：${sum / arr.length}`)
+
+        // 需求五
+        let max = 0
+        let min = 0
+        for (let i = 0; i < arr.length; i++) {
+            max = arr[i] <= max ? max : max = arr[i]
+            min = arr[i] <= min ? min = arr[i] : min
+        }
+        console.log(`最大值是:${max}`)
+        console.log(`最小值是:${min}`)
+    </script>
+</body>
+
+</html>
