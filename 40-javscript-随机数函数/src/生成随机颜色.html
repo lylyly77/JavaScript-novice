@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 需求:该函数接收一个布尔类型参数，表示颜色的格式是十六进制还是rgb格式。
+        // 如果参数传递的是true或者无参数，则输出一个随机十六进制的颜色
+        // 如果参数传递的是false，则输出 一个随机rgb的颜色
+        // 格式:
+        // function getRandomColor(flag){
+        // console.log(getRandomColor(true))    //#fffff
+        // console.log(getRandomColor(false)) //rgb(255,255,255)
+        // }
+        // 提示: 16进制颜色格式为:#ffffff’ 其中f可以是任意 0-f之间的字符提示
+        // rgb颜色格式为:rgb(255,255,255)’其中255可以是任意0-255之间的数字
+
+        let arr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'e', 'f']
+        let arr1 = []
+        let arr2 = []
+
+        for (let n = 1; n <= 6; n++) {
+            let i = getRandom(0, arr.length - 1)
+            console.log(arr[i])
+            arr1.push(arr[i])
+        }
+        console.log(`#${arr1[0]}${arr1[1]}${arr1[2]}${arr1[3]}${arr1[4]}${arr1[5]}`)
+        for (let num1 = 1; num1 <= 3; num1++) {
+            let num = getRandom(0, 255)
+            console.log(`rgb(${num})`)
+            arr2.push(num)
+        }
+        console.log(`rgb(${arr2[0]},${arr2[1]},${arr2[2]})`)
+
+        function getRandom(x, y) {
+            return Math.floor(Math.random() * (y - x + 1)) + x
+        }
+
+        function getRandomColor(bool) {
+            if (bool === false) {
+                alert(`rgb(${arr2[0]},${arr2[1]},${arr2[2]})`)
+            } else {
+                alert(`#${arr1[0]}${arr1[1]}${arr1[2]}${arr1[3]}${arr1[4]}${arr1[5]}`)
+            }
+        }
+        getRandomColor()
+
+    </script>
+</body>
+
+</html>
