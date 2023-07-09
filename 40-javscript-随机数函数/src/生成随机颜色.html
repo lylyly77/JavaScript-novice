@@ -33,7 +33,7 @@
                 // console.log(arr[i])
                 sum += arr[i]
             }
-            console.log(sum)
+            return sum
         }
         function colorRgb() {
             // 生成三个随机数
@@ -50,7 +50,7 @@
                     arr2[n2] = '0' + arr2[n2]
                 } else { }
             }
-            console.log(`rgb(${arr2[0]},${arr2[1]},${arr2[2]})`)
+            return `rgb(${arr2[0]},${arr2[1]},${arr2[2]})`
         }
 
 
@@ -58,16 +58,13 @@
             return Math.floor(Math.random() * (y - x + 1)) + x
         }
 
-        function getRandomColor(bool) {
+        function getRandomColor(bool = true) {
             if (bool === false) {
                 color16()
             } else {
                 colorRgb()
             }
         }
-        getRandomColor()
-        getRandomColor(false)
-
     </script>
 </body>
 
