@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 猜数字游戏(1-100)，设定次数，最多猜8次（随机数）
+        // 让用户输入一个数字，系统自己生成一个数字
+        // 可看40 猜数字游戏 设定次数版
+        let n = Math.floor(Math.random() * 100) + 1
+        console.log(n)
+
+        // 开关语句
+        let flag = true
+        for (let i = 1; i <= 8; i++) {
+            let num = +prompt(`请输入你猜的数字：`)
+            if (num > n) {
+                alert(`太大了，请继续`)
+            } else if (num < n) {
+                alert(`太小了，请继续`)
+            } else {
+                alert(`恭喜你猜对了`)
+                flag = false
+                break
+            }
+        }
+        if (flag) {
+            alert(`您的次数已用完`)
+        }
+    </script>
+</body>
+
+</html>
