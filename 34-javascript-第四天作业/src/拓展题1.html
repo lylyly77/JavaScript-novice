@@ -9,25 +9,25 @@
 
 <body>
     <script>
-        // 封装一个函数,可以求任意数组的和 或 平均值
-        // 函数可以传递2个参数，比如  handleData(arr, true)`handleData 处理数据的意思`
+        //     需求：  封装 some 函数查看数组是否存在某个元素  。
 
-        // * 参数一： 接受实参传递过来的数组
-        // * 参数二:    布尔类型  如果是true或者不传递参数 是求和操作，   如果传递过来的参数是 false 则是求平均值
+        // - 要传递2个参数 元素、数组
+        // - 如果数组存在元素则返回true，如果没有存在元素就返回 false
 
-        let sum = 0
-        function handleData(arr, bool = true) {
+        // 例如检测 香蕉  是否存在于  数组['苹果', '香蕉', '橘子', '荔枝', '梨子']中， 返回结果是 true
+
+
+        function some(el, arr = []) {
+            let flag = false
             for (let i = 0; i < arr.length; i++) {
-                sum += arr[i]
+                if (el === arr[i]) {
+                    flag = true
+                }
             }
-            if (bool === false) {
-                return sum / arr.length
-            } else {
-                return sum
-            }
+            return flag
         }
-        console.log(handleData([1, 2, 3], false))
-        console.log(handleData([1, 2, 3]))
+        console.log(some(3, [1, 2, 3]))
+        console.log(some(3, [1, 2]))
     </script>
 </body>
 
