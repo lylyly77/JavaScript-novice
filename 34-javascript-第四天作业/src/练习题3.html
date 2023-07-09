@@ -20,9 +20,9 @@
             let total = +prompt(`请输入你的银行卡余额`)
             let food = +prompt(`当月食宿消费余额`)
             let life = +prompt(`当月生活消费余额`)
-            document.write(`余额为：${total - food - life}`)
+            return `余额为：${total - food - life}`
         }
-        profit()
+        console.log(profit())
     </script>
 </body>
 

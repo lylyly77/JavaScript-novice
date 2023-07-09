@@ -15,15 +15,19 @@
         // * 参数一： 接受实参传递过来的数组
         // * 参数二:    布尔类型  如果是true或者不传递参数 是求和操作，   如果传递过来的参数是 false 则是求平均值
 
-        function some(n, arr) {
+        let sum = 0
+        function handleData(arr, bool = true) {
             for (let i = 0; i < arr.length; i++) {
-                if (n === arr[i]) {
-
-                }
+                sum += arr[i]
+            }
+            if (bool === false) {
+                return sum / arr.length
+            } else {
+                return sum
             }
         }
-        let x = some(2, [1, 2, 3])
-        console.log(x)
+        console.log(handleData([1, 2, 3], false))
+        console.log(handleData([1, 2, 3]))
     </script>
 </body>
 
