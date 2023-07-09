@@ -8,7 +8,24 @@
 </head>
 
 <body>
-
+    <script>
+        // 猜数字游戏
+        // 需求: 程序随机生成 1~10 之间的一个数字，用户输入一个数字
+        let num = Math.floor(Math.random() * 10) + 1
+        console.log(num)
+        let n = +prompt(`请您输入一个整数：`)
+        while (true) {
+            if (n > num) {
+                alert(`数字猜大了`)
+                n = +prompt(`请您输入一个整数：`)
+            } else if (n < num) {
+                alert(`数字猜小了`)
+                n = +prompt(`请您输入一个整数：`)
+            } else {
+                alert(`您猜对了`)
+            }
+        }
+    </script>
 </body>
 
 </html>
