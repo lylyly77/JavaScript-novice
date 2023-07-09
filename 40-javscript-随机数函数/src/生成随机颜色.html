@@ -5,9 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        div {
+            border: 1px solid black;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
 </head>
 
 <body>
+    <div></div>
     <script>
         // 需求:该函数接收一个布尔类型参数，表示颜色的格式是十六进制还是rgb格式。
         // 如果参数传递的是true或者无参数，则输出一个随机十六进制的颜色
@@ -22,7 +30,6 @@
 
         // 
         let arr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'e', 'f']
-        let arr1 = []
         let arr2 = []
         // 思路
         // 将生成的随机字符加入到新数组,遍历新数组,利用字符串拼接,最后打印
@@ -60,11 +67,13 @@
 
         function getRandomColor(bool = true) {
             if (bool === false) {
-                color16()
+                return color16()
             } else {
-                colorRgb()
+                return colorRgb()
             }
         }
+        let div = document.querySelector('div')
+        div.style.backgroundColor = getRandomColor()
     </script>
 </body>
 
