@@ -20,22 +20,42 @@
         // 提示: 16进制颜色格式为:#ffffff’ 其中f可以是任意 0-f之间的字符提示
         // rgb颜色格式为:rgb(255,255,255)’其中255可以是任意0-255之间的数字
 
+        // 
         let arr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'e', 'f']
         let arr1 = []
         let arr2 = []
+        // 思路
+        // 将生成的随机字符加入到新数组,遍历新数组,利用字符串拼接,最后打印
+        function color16() {
+            let sum = '#'
+            for (let n = 1; n <= 6; n++) {
+                let i = getRandom(0, arr.length - 1)
+                // console.log(arr[i])
+                arr1.push(arr[i])
+            }
+            for (let n1 = 0; n1 < arr1.length; n1++) {
+                sum += arr1[n1]
+            }
+            console.log(sum)
+        }
+        function colorRgb() {
+            // 生成三个随机数
+            for (let num1 = 1; num1 <= 3; num1++) {
+                let num = getRandom(0, 255)
+                // console.log(`rgb(${num})`)
+                arr2.push(num)
+            }
+            for (let n2 = 0; n2 < arr2.length; n2++) {
+                // 遍历进行补零,字符串+数字 = 字符串 隐式转换
+                if (arr2[n2] < 10) {
+                    arr2[n2] = '00' + arr2[n2]
+                } else if (arr2[n2] < 100) {
+                    arr2[n2] = '0' + arr2[n2]
+                } else { }
+            }
+            console.log(`rgb(${arr2[0]},${arr2[1]},${arr2[2]})`)
+        }
 
-        for (let n = 1; n <= 6; n++) {
-            let i = getRandom(0, arr.length - 1)
-            console.log(arr[i])
-            arr1.push(arr[i])
-        }
-        console.log(`#${arr1[0]}${arr1[1]}${arr1[2]}${arr1[3]}${arr1[4]}${arr1[5]}`)
-        for (let num1 = 1; num1 <= 3; num1++) {
-            let num = getRandom(0, 255)
-            console.log(`rgb(${num})`)
-            arr2.push(num)
-        }
-        console.log(`rgb(${arr2[0]},${arr2[1]},${arr2[2]})`)
 
         function getRandom(x, y) {
             return Math.floor(Math.random() * (y - x + 1)) + x
@@ -43,12 +63,13 @@
 
         function getRandomColor(bool) {
             if (bool === false) {
-                alert(`rgb(${arr2[0]},${arr2[1]},${arr2[2]})`)
+                color16()
             } else {
-                alert(`#${arr1[0]}${arr1[1]}${arr1[2]}${arr1[3]}${arr1[4]}${arr1[5]}`)
+                colorRgb()
             }
         }
         getRandomColor()
+        getRandomColor(false)
 
     </script>
 </body>
