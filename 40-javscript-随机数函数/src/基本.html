@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Math.random() 返回一个[0，1)的随机数，左闭右开
+
+        console.log(Math.random())
+
+        // 取0-10之间的随机  整数
+        // 思路 random()在[0,1)之间取小数，乘以11就是[0,11)
+        // floor()向下取整 10.21就可以取到10了
+        console.log(Math.floor(Math.random() * 11))
+
+        // 随机抽取数组的元素
+        let arr = ['red', 'green', 'purple']
+        let random = Math.floor(Math.random() * 3)
+        console.log(arr[random])
+
+        // 生成5-10之间的随机整数
+        console.log(Math.floor(Math.random() * 6) + 5)
+
+        // 生成N-M之间的随机整数
+        // N加在Math.floor()外面
+        console.log(Math.floor(Math.random() * (M - N + 1)) + N)
+    </script>
+</body>
+
+</html>
