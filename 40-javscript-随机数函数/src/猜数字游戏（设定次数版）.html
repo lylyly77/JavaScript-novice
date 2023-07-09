@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 猜数字游戏
+        // 需求: 程序随机生成 1~10 之间的一个数字，用户输入一个数字,但是只能猜三次
+
+        function getRandom(x, y) {
+            return Math.floor(Math.random() * (y - x + 1)) + x
+        }
+        let random = getRandom(1, 10)
+        console.log(random)
+        // 开关语句
+        // 当猜对的时候，将flag=false，就不会再显示很遗憾您没有次数了
+        // 明明for循环有循环次数，为什么还要加break取跳出循环
+        // 是因为如果用户第一次就猜对了，就没必要继续往下循环了
+        let flag = true
+        for (let i = 1; i <= 3; i++) {
+            debugger
+            let n = +prompt(`请您输入一个整数：`)
+            if (n > random) {
+                alert(`数字猜大了，继续`)
+            } else if (n < random) {
+                alert(`数字猜小了，继续`)
+            } else {
+                alert(`您猜对了`)
+                flag = false
+                break
+            }
+        }
+        if (flag) {
+            alert(`很遗憾，你没有次数了`)
+        }
+    </script>
+</body>
+
+</html>
