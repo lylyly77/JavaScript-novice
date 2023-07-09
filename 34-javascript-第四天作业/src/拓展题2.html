@@ -9,22 +9,24 @@
 
 <body>
     <script>
-        // 封装一个函数,可以求任意数组的和 或 平均值
-        // 函数可以传递2个参数，比如  handleData(arr, true)`handleData 处理数据的意思`
+        //     需求：  封装 findIndex 函数返回查找元素在数组中的索引号。
 
-        // * 参数一： 接受实参传递过来的数组
-        // * 参数二:    布尔类型  如果是true或者不传递参数 是求和操作，   如果传递过来的参数是 false 则是求平均值
+        // - 要传递2个参数 元素、数组
+        // - 如果找到，则返回查找元素在数组中的索引号，如果查找不到，则返回 -1
 
-        function some(n, arr) {
+
+        function findIndex(el, arr = []) {
+            let index = -1
             for (let i = 0; i < arr.length; i++) {
-                while (n === arr[i]) {
-                    console.log(true)
+                if (el === arr[i]) {
+                    index = i
+                    break
                 }
             }
-            return false
+            return index
         }
-        let x = some(2, [1, 2, 3])
-        console.log(x)
+        console.log(findIndex(1, [1, 2, 3]))
+        console.log(findIndex(0, [1, 2, 3]))
     </script>
 </body>
 
